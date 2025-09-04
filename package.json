@@ -1,0 +1,33 @@
+{
+  "name": "@polyneural/mcp-client",
+  "version": "1.0.0",
+  "description": "MCP Client Bridge for Polyneural AI - converts HTTP MCP server to stdin/stdout MCP protocol for Warp terminal",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "DEBUG=1 node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "client",
+    "bridge",
+    "polyneural",
+    "ai",
+    "warp"
+  ],
+  "author": "Polyneural AI",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polyneural-ai/mcp-client.git",
+    "directory": "mcp-client"
+  },
+  "bin": {
+    "mcp-client": "./index.js"
+  }
+}
