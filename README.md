@@ -31,7 +31,7 @@ The client is configured via environment variables:
 
 ### Optional Environment Variables
 
-- `POLYNEURAL_API_URL` - API base URL (default: `https://polyneural.ai/mcp`)
+- `POLYNEURAL_API_URL` - API base URL (default: `https://api.polyneural.ai/mcp`)
 - `DEBUG` - Enable debug logging (`1` to enable, `0` or unset to disable)
 - `REQUEST_TIMEOUT_MS` - HTTP request timeout in milliseconds (default: `30000`)
 - `SHORT_TERM` - Enable embedded short-term memory in tool descriptions (`true`/`false`, default: `false`)
@@ -69,7 +69,7 @@ npm run dev
 
 ```bash
 export POLYNEURAL_API_KEY=kg_your_api_key_here
-export POLYNEURAL_API_URL=https://your-custom-api.example.com/mcp
+export POLYNEURAL_API_URL=https://api.polyneural.ai/mcp  # or staging/local as needed
 node index.js
 ```
 

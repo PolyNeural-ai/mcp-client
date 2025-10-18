@@ -21,7 +21,7 @@ const { Transform } = require('stream');
 // Using native fetch (Node.js v18+) instead of node-fetch package
 
 // Configuration from environment variables
-const API_BASE = process.env.POLYNEURAL_API_URL || 'https://polyneural.ai/mcp';
+const API_BASE = process.env.POLYNEURAL_API_URL || 'https://api.polyneural.ai/mcp';
 const API_KEY = process.env.POLYNEURAL_API_KEY;
 const SHORT_TERM = process.env.SHORT_TERM || 'false';
 
