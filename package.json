@@ -1,6 +1,6 @@
 {
   "name": "@polyneural/mcp-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP Client Bridge for Polyneural AI - converts HTTP MCP server to stdin/stdout MCP protocol for Warp terminal",
   "main": "index.js",
   "scripts": {
