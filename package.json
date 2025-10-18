@@ -28,6 +28,6 @@
     "directory": "mcp-client"
   },
   "bin": {
-    "mcp-client": "./index.js"
+    "mcp-client": "index.js"
   }
 }
