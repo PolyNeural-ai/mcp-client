@@ -23,6 +23,7 @@ const { Transform } = require('stream');
 // Configuration from environment variables
 const API_BASE = process.env.POLYNEURAL_API_URL || 'https://polyneural.ai/mcp';
 const API_KEY = process.env.POLYNEURAL_API_KEY;
+const SHORT_TERM = process.env.SHORT_TERM || 'false';
 
 // Validate required environment variables
 if (!API_KEY) {
@@ -47,6 +48,7 @@ log(`Starting MCP Client Bridge`);
 log(`API Base URL: ${API_BASE}`);
 log(`API Key: ${API_KEY ? API_KEY.substring(0, 8) + '...' : 'NOT SET'}`);
 log(`Request Timeout: ${REQUEST_TIMEOUT_MS}ms`);
+log(`Short-Term Memory: ${SHORT_TERM}`);
 
 /**
  * Custom Transform stream to handle large JSON messages
@@ -131,7 +133,8 @@ async function makeRequest(endpoint, data) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${API_KEY}`
+          'Authorization': `Bearer ${API_KEY}`,
+          'X-Short-Term-Memory': SHORT_TERM
         },
         body: JSON.stringify(data),
         signal: controller.signal

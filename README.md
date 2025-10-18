@@ -34,6 +34,7 @@ The client is configured via environment variables:
 - `POLYNEURAL_API_URL` - API base URL (default: `https://polyneural.ai/mcp`)
 - `DEBUG` - Enable debug logging (`1` to enable, `0` or unset to disable)
 - `REQUEST_TIMEOUT_MS` - HTTP request timeout in milliseconds (default: `30000`)
+- `SHORT_TERM` - Enable embedded short-term memory in tool descriptions (`true`/`false`, default: `false`)
 
 ## Usage
 
@@ -83,7 +84,8 @@ To use this client with Warp terminal, add it to your MCP configuration:
       "command": "node",
       "args": ["/path/to/polyneural.ai/mcp-client/index.js"],
       "env": {
-        "POLYNEURAL_API_KEY": "kg_your_api_key_here"
+        "POLYNEURAL_API_KEY": "kg_your_api_key_here",
+        "SHORT_TERM": "true"
       }
     }
   }
@@ -102,7 +104,8 @@ For Claude Desktop, add to your configuration file:
       "args": ["/path/to/polyneural.ai/mcp-client/index.js"],
       "env": {
         "POLYNEURAL_API_KEY": "kg_your_api_key_here",
-        "POLYNEURAL_API_URL": "https://polyneural.ai/mcp"
+        "POLYNEURAL_API_URL": "https://polyneural.ai/mcp",
+        "SHORT_TERM": "true"
       }
     }
   }
